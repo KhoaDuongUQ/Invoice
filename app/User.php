@@ -11,6 +11,22 @@ class User extends Authenticatable implements MustVerifyEmail
     use Notifiable;
 
     /**
+     * Get the stores of a user
+     */
+    public function stores()
+    {
+        return $this->hasMany('App\Store');
+    }
+
+    /**
+     * Get the items of a user
+     */
+    public function items()
+    {
+        return $this->hasManyThrough('App\Item', 'App\Store');
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array

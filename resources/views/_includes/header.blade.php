@@ -1,7 +1,7 @@
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ route('home') }}">
-      <img src="{{ asset('images/logo.png') }}" alt="Logo" width="112" height="28">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
     </a>
   </div>
 
@@ -10,11 +10,25 @@
     </div>
     <div class="navbar-end">
       @if (Auth::guest())
-        <a href="{{ route('login') }}" class="navbar-item"> Login </a>
-        <a href="{{ route('register') }}" class="navbar-item"> Signup </a>
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="{{ route('register') }}" class="button is-small">
+							<span class="icon">
+								<i class="fa fa-user-plus"></i>
+							</span>
+							<span>Register</span>
+						</a>
+            <a href="{{ route('login') }}" class="button is-small is-info is-outlined">
+							<span class="icon">
+								<i class="fa fa-user"></i>
+							</span>
+							<span>Login</span>
+						</a>
+          </div>
+        </div>
       @else
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"> Hey {{ Auth::user()->name }} </a>
+          <a class="navbar-link"> {{ Auth::user()->name }} </a>
 
           <div class="navbar-dropdown is-right">
             <a class="navbar-item" href="#">
@@ -22,10 +36,10 @@
                 <i class="fas fa-fw fa-user-circle m-r-5"></i>
               </span> Profile
             </a>
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" href="{{ route('dashboard.index') }}">
               <span>
                 <i class="fas fa-fw fa-bell m-r-5"></i>
-              </span> Notifications
+              </span> Dashboard
             </a>
             <hr class="navbar-divider">
             <a class="navbar-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">

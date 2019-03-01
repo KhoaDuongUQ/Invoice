@@ -1,0 +1,51 @@
+/*body, html, .body {
+    font-family: 'Open Sans', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
+    background: #ecf0f3 !important;
+}*/
+
+nav.navbar {
+    margin-bottom: 1rem;
+}
+
+.hero.welcome.is-info {
+    background: #36D1DC;
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    background: linear-gradient(to right, #5B86E5, #36D1DC);
+}
+
+.hero.welcome .title, .hero.welcome .subtitle {
+    color: hsl(192, 17%, 99%);
+}
+
+.info-tiles {
+    margin: 1rem 0;
+}
+
+.info-tiles .subtitle {
+    font-weight: 300;
+    color: #8F99A3;
+}
+
+.card-content {
+    font-size: 15px;
+}
+
+.card-footer-item {
+    font-size: 14px;
+    font-weight: 700;
+    color: #8F99A3;
+}
+
+.card-footer-item:hover {}
+
+.card-content .table {
+    margin-bottom: 0;
+}
+
+.stores-card .card-content {
+    max-height: 250px;
+    overflow-y: scroll;
+}

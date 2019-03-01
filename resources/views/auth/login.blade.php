@@ -46,7 +46,7 @@
             </div>
 
             <button class="button is-primary is-outlined is-fullwidth"> Login </button>
-            <a class="button is-info is-small is-outlined" href="{{ route('password.request') }}"> Forgot Your Password? </a>
+            <a class="button is-info is-small is-outlined m-t-10" href="{{ route('password.request') }}"> Forgot Your Password? </a>
           </form>
 
 
