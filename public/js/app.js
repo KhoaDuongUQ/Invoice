@@ -2284,11 +2284,6 @@ __webpack_require__.r(__webpack_exports__);
       type: String,
       required: true
     }
-  },
-  computed: {
-    user: function user() {
-      return JSON.parse(this.userProps) || '';
-    }
   }
 });
 

@@ -65,11 +65,6 @@ export default {
             type: String,
             required: true
         },
-    },
-    computed: {
-        user() {
-            return JSON.parse(this.userProps) || '';
-        }
     }
 }
 </script>
