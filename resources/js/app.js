@@ -16,6 +16,10 @@ Vue.use(Buefy)
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+//User
+Vue.component('user-create-form', require('./components/users/UserCreateForm.vue').default);
+
 // Store
 Vue.component('store-create-form', require('./components/stores/StoreCreateForm.vue').default);
 Vue.component('store-edit-form', require('./components/stores/StoreEditForm.vue').default);

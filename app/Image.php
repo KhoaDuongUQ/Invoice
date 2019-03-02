@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     /**
+     * Get the user of the image
+     */
+    public function user()
+    {
+        return $this->morphTo('App\User', 'imageable');
+    }
+
+    /**
      * Get the store of the image
      */
     public function store()

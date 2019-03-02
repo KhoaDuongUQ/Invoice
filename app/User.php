@@ -27,6 +27,14 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
+     * Get the user's image.
+     */
+    public function image()
+    {
+        return $this->morphOne('App\Image', 'imageable');
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
