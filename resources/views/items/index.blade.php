@@ -20,7 +20,7 @@
             </div>
             <div class="media-right buttons">
               <edit-button
-                delete-route="{{ route('stores.items.edit', [$store, $item]) }}">
+                edit-route="{{ route('stores.items.edit', [$store, $item]) }}">
               </edit-button>
               <delete-button
                 object-name="item"

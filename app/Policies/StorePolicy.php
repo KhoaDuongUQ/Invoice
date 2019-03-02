@@ -90,6 +90,6 @@ class StorePolicy
      */
     public function forceDelete(User $user, Store $store)
     {
-        //
+        return $user->id === $store->user_id;
     }
 }

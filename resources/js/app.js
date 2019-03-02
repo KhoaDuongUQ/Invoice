@@ -17,7 +17,11 @@ Vue.use(Buefy)
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-//User
+// Auth
+Vue.component('change-password-button', require('./components/auth/ChangePasswordButton.vue').default);
+Vue.component('change-password-form', require('./components/auth/ChangePasswordForm.vue').default);
+
+// User
 Vue.component('user-create-form', require('./components/users/UserCreateForm.vue').default);
 Vue.component('user-edit-form', require('./components/users/UserEditForm.vue').default);
 
@@ -36,7 +40,7 @@ Vue.component('logout-button', require('./components/partials/LogoutButton.vue')
 Vue.component('flash-message', require('./components/partials/FlashMessage.vue').default);
 Vue.component('edit-button', require('./components/partials/EditButton.vue').default);
 Vue.component('delete-button', require('./components/partials/DeleteButton.vue').default);
-Vue.component('change-password-button', require('./components/partials/ChangePasswordButton.vue').default);
+
 
 const app = new Vue({
     el: '#app'

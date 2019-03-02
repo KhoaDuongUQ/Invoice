@@ -14,8 +14,8 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
 
-Route::get('/changepassword', 'UserController@showChangePasswordForm')->name('changepassword');
-Route::post('/updatepassword', 'UserController@updatePassword')->name('updatepassword');
+Route::get('/changepassword', 'Auth\ChangePasswordController@showChangePasswordForm')->name('changepassword');
+Route::post('/updatepassword', 'Auth\ChangePasswordController@updatePassword')->name('updatepassword');
 
 Route::resource('users', 'UserController')->only([
     'show', 'edit', 'update'

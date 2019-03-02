@@ -8,6 +8,8 @@ use App\Store;
 use App\Policies\StorePolicy;
 use App\Item;
 use App\Policies\ItemPolicy;
+use App\User;
+use App\Policies\UserPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -18,8 +20,9 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         'App\Model' => 'App\Policies\ModelPolicy',
+        User::class => UserPolicy::class,
         Store::class => StorePolicy::class,
-        Item::class => ItemPolicy::class
+        Item::class => ItemPolicy::class,
     ];
 
     /**

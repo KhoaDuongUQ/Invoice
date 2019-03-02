@@ -33,7 +33,7 @@
         <footer class="card-footer">
           <div class="card-footer-item buttons is-centered">
             <edit-button
-              delete-route="{{ route('stores.items.edit', [$store, $item]) }}">
+              edit-route="{{ route('stores.items.edit', [$store, $item]) }}">
             </edit-button>
             <delete-button
               object-name="item"
