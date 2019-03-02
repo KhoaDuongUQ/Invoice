@@ -3,7 +3,7 @@
     <input type="hidden" name="_token" :value="csrfToken">
     <input type="hidden" name="_method" value="DELETE">
     <p class="control">
-        <button type="submit" name="button" class="button is-small is-danger" @click="confirm($event, objectName)">
+        <button type="submit" class="button is-small is-danger" @click="confirm($event, objectName)">
             <span class="icon is-small">
               <i class="far fa-times-circle"></i>
             </span>

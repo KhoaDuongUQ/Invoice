@@ -15,6 +15,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
 
 Route::resources([
+  'users' => 'UserController',
   'users.stores' => 'StoreController',
   'stores.items' => 'ItemController'
 ]);

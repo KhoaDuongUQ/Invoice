@@ -16,7 +16,9 @@ Vue.use(Buefy)
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('edit-delete-dropdown', require('./components/Dropdown.vue').default);
+Vue.component('navbar-guest', require('./components/NavbarGuest.vue').default);
+Vue.component('navbar-auth', require('./components/NavbarAuth.vue').default);
+Vue.component('logout-button', require('./components/LogoutButton.vue').default);
 Vue.component('flash-message', require('./components/FlashMessage.vue').default);
 Vue.component('store-create-form', require('./components/StoreCreateForm.vue').default);
 Vue.component('store-edit-form', require('./components/StoreEditForm.vue').default);
