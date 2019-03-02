@@ -1,5 +1,5 @@
 <template >
-<a :href="deleteRoute" class="button is-small is-primary">
+<a :href="editRoute" class="button is-small is-primary">
   <span class="icon is-small">
     <i class="fas fa-edit"></i>
   </span>
@@ -10,7 +10,7 @@
 <script>
 export default {
     props: {
-        deleteRoute: String
+        editRoute: String
     }
 }
 </script>

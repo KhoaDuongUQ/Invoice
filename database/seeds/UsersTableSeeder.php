@@ -19,7 +19,8 @@ class UsersTableSeeder extends Seeder
           'email_verified_at' => now(),
           'remember_token' => str_random(10),
         ]);
-
+        $user->image()->save(factory(App\Image::class)->make());
+        
         $stores = factory(App\Store::class, 10)->make();
         $user->stores()->saveMany($stores);
 

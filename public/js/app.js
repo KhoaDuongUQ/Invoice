@@ -1949,6 +1949,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/ChangePasswordButton.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/ChangePasswordButton.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    changePasswordRoute: String
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/DeleteButton.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/DeleteButton.vue?vue&type=script&lang=js& ***!
@@ -2021,7 +2047,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    deleteRoute: String
+    editRoute: String
   }
 });
 
@@ -2574,6 +2600,106 @@ __webpack_require__.r(__webpack_exports__);
     return {
       file: null,
       errors: JSON.parse(this.errorsProps)
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/users/UserEditForm.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/users/UserEditForm.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    imageUrl: {
+      type: String,
+      required: true
+    },
+    editRoute: {
+      type: String,
+      required: true
+    },
+    csrfToken: {
+      type: String,
+      required: true
+    },
+    errorsProps: {
+      type: String,
+      required: true
+    },
+    userProps: {
+      type: String,
+      required: true
+    },
+    previousUrl: {
+      type: String,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      file: null,
+      errors: JSON.parse(this.errorsProps),
+      user: JSON.parse(this.userProps)
     };
   }
 });
@@ -45801,6 +45927,46 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/ChangePasswordButton.vue?vue&type=template&id=666b4d3f&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/ChangePasswordButton.vue?vue&type=template&id=666b4d3f&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "a",
+    {
+      staticClass: "button is-small is-warning",
+      attrs: { href: _vm.changePasswordRoute }
+    },
+    [_vm._m(0), _vm._v(" "), _c("span", [_vm._v("Change Password")])]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "icon is-small" }, [
+      _c("i", { staticClass: "fas fa-key" })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/DeleteButton.vue?vue&type=template&id=657ceb02&scoped=true&":
 /*!************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/DeleteButton.vue?vue&type=template&id=657ceb02&scoped=true& ***!
@@ -45885,7 +46051,7 @@ var render = function() {
     "a",
     {
       staticClass: "button is-small is-primary",
-      attrs: { href: _vm.deleteRoute }
+      attrs: { href: _vm.editRoute }
     },
     [_vm._m(0), _vm._v(" "), _c("span", [_vm._v("Edit")])]
   )
@@ -46844,6 +47010,191 @@ var render = function() {
             },
             [_vm._v(" Already have an account? ")]
           )
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/users/UserEditForm.vue?vue&type=template&id=273cbdaa&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/users/UserEditForm.vue?vue&type=template&id=273cbdaa&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "card" }, [
+    _c("div", { staticClass: "card-content" }, [
+      _c("h1", { staticClass: "title" }, [
+        _vm._v(" Edit account information ")
+      ]),
+      _vm._v(" "),
+      _c("nav", { staticClass: "level" }, [
+        _c("div", { staticClass: "level-item has-text-centered" }, [
+          _c("figure", { staticClass: "image is-128x128" }, [
+            _c("img", {
+              staticClass: "is-rounded",
+              attrs: { src: _vm.imageUrl }
+            })
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          attrs: {
+            action: _vm.editRoute,
+            method: "post",
+            role: "form",
+            enctype: "multipart/form-data"
+          }
+        },
+        [
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrfToken }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            attrs: { type: "hidden", name: "_method", value: "PUT" }
+          }),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              attrs: {
+                label: "Name",
+                type: _vm.errors.name ? "is-danger" : "",
+                message: _vm.errors.name ? _vm.errors.name[0] : ""
+              }
+            },
+            [
+              _c("b-input", {
+                attrs: { name: "name", "icon-pack": "fas", icon: "user" },
+                model: {
+                  value: _vm.user.name,
+                  callback: function($$v) {
+                    _vm.$set(_vm.user, "name", $$v)
+                  },
+                  expression: "user.name"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              attrs: {
+                label: "Email",
+                type: _vm.errors.email ? "is-danger" : "",
+                message: _vm.errors.email ? _vm.errors.email[0] : ""
+              }
+            },
+            [
+              _c("b-input", {
+                attrs: { name: "email", "icon-pack": "fas", icon: "envelope" },
+                model: {
+                  value: _vm.user.email,
+                  callback: function($$v) {
+                    _vm.$set(_vm.user, "email", $$v)
+                  },
+                  expression: "user.email"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              staticClass: "file",
+              attrs: {
+                type: _vm.errors.image ? "is-danger" : "",
+                message: _vm.errors.image ? _vm.errors.image[0] : ""
+              }
+            },
+            [
+              _c(
+                "b-upload",
+                {
+                  attrs: { name: "image" },
+                  model: {
+                    value: _vm.file,
+                    callback: function($$v) {
+                      _vm.file = $$v
+                    },
+                    expression: "file"
+                  }
+                },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "button is-info" },
+                    [
+                      _c("b-icon", { attrs: { icon: "upload" } }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Store image upload")])
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm.file
+                ? _c("span", { staticClass: "file-name" }, [
+                    _vm._v(
+                      "\n                   " +
+                        _vm._s(_vm.file.name) +
+                        "\n                 "
+                    )
+                  ])
+                : _vm._e()
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("b-field", { attrs: { grouped: "", position: "is-centered" } }, [
+            _c("p", { staticClass: "control" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "button is-primary",
+                  attrs: { type: "submit", name: "button" }
+                },
+                [_vm._v(" Save ")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "control" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "button is-light",
+                  attrs: { href: _vm.previousUrl }
+                },
+                [_vm._v(" Cancel ")]
+              )
+            ])
+          ])
         ],
         1
       )
@@ -58936,7 +59287,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(buefy__WEBPACK_IMPORTED_MODULE_1_
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 //User
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('user-create-form', __webpack_require__(/*! ./components/users/UserCreateForm.vue */ "./resources/js/components/users/UserCreateForm.vue").default); // Store
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('user-create-form', __webpack_require__(/*! ./components/users/UserCreateForm.vue */ "./resources/js/components/users/UserCreateForm.vue").default);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('user-edit-form', __webpack_require__(/*! ./components/users/UserEditForm.vue */ "./resources/js/components/users/UserEditForm.vue").default); // Store
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('store-create-form', __webpack_require__(/*! ./components/stores/StoreCreateForm.vue */ "./resources/js/components/stores/StoreCreateForm.vue").default);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('store-edit-form', __webpack_require__(/*! ./components/stores/StoreEditForm.vue */ "./resources/js/components/stores/StoreEditForm.vue").default); //Item
@@ -58950,6 +59302,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('logout-button', __webpack_
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('flash-message', __webpack_require__(/*! ./components/partials/FlashMessage.vue */ "./resources/js/components/partials/FlashMessage.vue").default);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('edit-button', __webpack_require__(/*! ./components/partials/EditButton.vue */ "./resources/js/components/partials/EditButton.vue").default);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('delete-button', __webpack_require__(/*! ./components/partials/DeleteButton.vue */ "./resources/js/components/partials/DeleteButton.vue").default);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('change-password-button', __webpack_require__(/*! ./components/partials/ChangePasswordButton.vue */ "./resources/js/components/partials/ChangePasswordButton.vue").default);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app'
 });
@@ -59145,6 +59498,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemEditForm_vue_vue_type_template_id_76505c8a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemEditForm_vue_vue_type_template_id_76505c8a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/partials/ChangePasswordButton.vue":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/partials/ChangePasswordButton.vue ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ChangePasswordButton_vue_vue_type_template_id_666b4d3f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChangePasswordButton.vue?vue&type=template&id=666b4d3f&scoped=true& */ "./resources/js/components/partials/ChangePasswordButton.vue?vue&type=template&id=666b4d3f&scoped=true&");
+/* harmony import */ var _ChangePasswordButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChangePasswordButton.vue?vue&type=script&lang=js& */ "./resources/js/components/partials/ChangePasswordButton.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ChangePasswordButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ChangePasswordButton_vue_vue_type_template_id_666b4d3f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ChangePasswordButton_vue_vue_type_template_id_666b4d3f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "666b4d3f",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/partials/ChangePasswordButton.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/partials/ChangePasswordButton.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/partials/ChangePasswordButton.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChangePasswordButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ChangePasswordButton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/ChangePasswordButton.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChangePasswordButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/partials/ChangePasswordButton.vue?vue&type=template&id=666b4d3f&scoped=true&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/components/partials/ChangePasswordButton.vue?vue&type=template&id=666b4d3f&scoped=true& ***!
+  \**************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChangePasswordButton_vue_vue_type_template_id_666b4d3f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ChangePasswordButton.vue?vue&type=template&id=666b4d3f&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/ChangePasswordButton.vue?vue&type=template&id=666b4d3f&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChangePasswordButton_vue_vue_type_template_id_666b4d3f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChangePasswordButton_vue_vue_type_template_id_666b4d3f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -59766,6 +60188,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserCreateForm_vue_vue_type_template_id_d9932646_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserCreateForm_vue_vue_type_template_id_d9932646_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/users/UserEditForm.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/users/UserEditForm.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UserEditForm_vue_vue_type_template_id_273cbdaa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserEditForm.vue?vue&type=template&id=273cbdaa&scoped=true& */ "./resources/js/components/users/UserEditForm.vue?vue&type=template&id=273cbdaa&scoped=true&");
+/* harmony import */ var _UserEditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserEditForm.vue?vue&type=script&lang=js& */ "./resources/js/components/users/UserEditForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _UserEditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _UserEditForm_vue_vue_type_template_id_273cbdaa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _UserEditForm_vue_vue_type_template_id_273cbdaa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "273cbdaa",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/users/UserEditForm.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/users/UserEditForm.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/users/UserEditForm.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserEditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserEditForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/users/UserEditForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserEditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/users/UserEditForm.vue?vue&type=template&id=273cbdaa&scoped=true&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/users/UserEditForm.vue?vue&type=template&id=273cbdaa&scoped=true& ***!
+  \***************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserEditForm_vue_vue_type_template_id_273cbdaa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserEditForm.vue?vue&type=template&id=273cbdaa&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/users/UserEditForm.vue?vue&type=template&id=273cbdaa&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserEditForm_vue_vue_type_template_id_273cbdaa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserEditForm_vue_vue_type_template_id_273cbdaa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

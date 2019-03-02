@@ -14,8 +14,14 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
 
+Route::get('/changepassword', 'UserController@showChangePasswordForm')->name('changepassword');
+Route::post('/updatepassword', 'UserController@updatePassword')->name('updatepassword');
+
+Route::resource('users', 'UserController')->only([
+    'show', 'edit', 'update'
+]);
+
 Route::resources([
-  'users' => 'UserController',
   'users.stores' => 'StoreController',
   'stores.items' => 'ItemController'
 ]);
