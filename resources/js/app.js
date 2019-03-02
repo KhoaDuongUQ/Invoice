@@ -16,16 +16,21 @@ Vue.use(Buefy)
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('navbar-guest', require('./components/NavbarGuest.vue').default);
-Vue.component('navbar-auth', require('./components/NavbarAuth.vue').default);
-Vue.component('logout-button', require('./components/LogoutButton.vue').default);
-Vue.component('flash-message', require('./components/FlashMessage.vue').default);
-Vue.component('store-create-form', require('./components/StoreCreateForm.vue').default);
-Vue.component('store-edit-form', require('./components/StoreEditForm.vue').default);
-Vue.component('item-create-form', require('./components/ItemCreateForm.vue').default);
-Vue.component('item-edit-form', require('./components/ItemEditForm.vue').default);
-Vue.component('edit-button', require('./components/EditButton.vue').default);
-Vue.component('delete-button', require('./components/DeleteButton.vue').default);
+// Store
+Vue.component('store-create-form', require('./components/stores/StoreCreateForm.vue').default);
+Vue.component('store-edit-form', require('./components/stores/StoreEditForm.vue').default);
+
+//Item
+Vue.component('item-create-form', require('./components/items/ItemCreateForm.vue').default);
+Vue.component('item-edit-form', require('./components/items/ItemEditForm.vue').default);
+
+// Partials
+Vue.component('navbar-guest', require('./components/partials/NavbarGuest.vue').default);
+Vue.component('navbar-auth', require('./components/partials/NavbarAuth.vue').default);
+Vue.component('logout-button', require('./components/partials/LogoutButton.vue').default);
+Vue.component('flash-message', require('./components/partials/FlashMessage.vue').default);
+Vue.component('edit-button', require('./components/partials/EditButton.vue').default);
+Vue.component('delete-button', require('./components/partials/DeleteButton.vue').default);
 
 const app = new Vue({
     el: '#app'
