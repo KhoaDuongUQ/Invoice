@@ -2006,9 +2006,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     imageUrl: {
@@ -2403,9 +2400,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
 //
 //
 //
@@ -45973,202 +45967,198 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", [
-    _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "card-content" }, [
-        _c("h1", { staticClass: "title" }, [_vm._v(" Edit item information ")]),
-        _vm._v(" "),
-        _c("nav", { staticClass: "level" }, [
-          _c("div", { staticClass: "level-item has-text-centered" }, [
-            _c("figure", { staticClass: "image is-128x128" }, [
-              _c("img", {
-                staticClass: "is-rounded",
-                attrs: { src: _vm.imageUrl }
+  return _c("div", { staticClass: "card" }, [
+    _c("div", { staticClass: "card-content" }, [
+      _c("h1", { staticClass: "title" }, [_vm._v(" Edit item information ")]),
+      _vm._v(" "),
+      _c("nav", { staticClass: "level" }, [
+        _c("div", { staticClass: "level-item has-text-centered" }, [
+          _c("figure", { staticClass: "image is-128x128" }, [
+            _c("img", {
+              staticClass: "is-rounded",
+              attrs: { src: _vm.imageUrl }
+            })
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          attrs: {
+            action: _vm.editRoute,
+            method: "post",
+            role: "form",
+            enctype: "multipart/form-data"
+          }
+        },
+        [
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrfToken }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            attrs: { type: "hidden", name: "_method", value: "PUT" }
+          }),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              attrs: {
+                label: "Name",
+                type: _vm.errors.name ? "is-danger" : "",
+                message: _vm.errors.name ? _vm.errors.name[0] : ""
+              }
+            },
+            [
+              _c("b-input", {
+                attrs: { name: "name", "icon-pack": "fas", icon: "item" },
+                model: {
+                  value: _vm.item.name,
+                  callback: function($$v) {
+                    _vm.$set(_vm.item, "name", $$v)
+                  },
+                  expression: "item.name"
+                }
               })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              attrs: {
+                label: "Description",
+                type: _vm.errors.address ? "is-danger" : "",
+                message: _vm.errors.address ? _vm.errors.address[0] : ""
+              }
+            },
+            [
+              _c("b-input", {
+                attrs: {
+                  name: "description",
+                  "icon-pack": "fas",
+                  icon: "location-arrow"
+                },
+                model: {
+                  value: _vm.item.description,
+                  callback: function($$v) {
+                    _vm.$set(_vm.item, "description", $$v)
+                  },
+                  expression: "item.description"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              attrs: {
+                label: "Price",
+                type: _vm.errors.description ? "is-danger" : "",
+                message: _vm.errors.description ? _vm.errors.description[0] : ""
+              }
+            },
+            [
+              _c("b-input", {
+                attrs: {
+                  type: "number",
+                  step: "any",
+                  name: "price",
+                  "icon-pack": "fas",
+                  icon: "info-circle"
+                },
+                model: {
+                  value: _vm.item.price,
+                  callback: function($$v) {
+                    _vm.$set(_vm.item, "price", $$v)
+                  },
+                  expression: "item.price"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              staticClass: "file",
+              attrs: {
+                type: _vm.errors.image ? "is-danger" : "",
+                message: _vm.errors.image ? _vm.errors.image[0] : ""
+              }
+            },
+            [
+              _c(
+                "b-upload",
+                {
+                  attrs: { name: "image" },
+                  model: {
+                    value: _vm.file,
+                    callback: function($$v) {
+                      _vm.file = $$v
+                    },
+                    expression: "file"
+                  }
+                },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "button is-info" },
+                    [
+                      _c("b-icon", { attrs: { icon: "upload" } }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Store image upload")])
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm.file
+                ? _c("span", { staticClass: "file-name" }, [
+                    _vm._v(
+                      "\n               " +
+                        _vm._s(_vm.file.name) +
+                        "\n             "
+                    )
+                  ])
+                : _vm._e()
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("b-field", { attrs: { grouped: "", position: "is-centered" } }, [
+            _c("p", { staticClass: "control" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "button is-primary",
+                  attrs: { type: "submit", name: "button" }
+                },
+                [_vm._v(" Save ")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "control" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "button is-light",
+                  attrs: { href: _vm.previousUrl }
+                },
+                [_vm._v(" Cancel ")]
+              )
             ])
           ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "form",
-          {
-            attrs: {
-              action: _vm.editRoute,
-              method: "post",
-              role: "form",
-              enctype: "multipart/form-data"
-            }
-          },
-          [
-            _c("input", {
-              attrs: { type: "hidden", name: "_token" },
-              domProps: { value: _vm.csrfToken }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              attrs: { type: "hidden", name: "_method", value: "PUT" }
-            }),
-            _vm._v(" "),
-            _c(
-              "b-field",
-              {
-                attrs: {
-                  label: "Name",
-                  type: _vm.errors.name ? "is-danger" : "",
-                  message: _vm.errors.name ? _vm.errors.name[0] : ""
-                }
-              },
-              [
-                _c("b-input", {
-                  attrs: { name: "name", "icon-pack": "fas", icon: "item" },
-                  model: {
-                    value: _vm.item.name,
-                    callback: function($$v) {
-                      _vm.$set(_vm.item, "name", $$v)
-                    },
-                    expression: "item.name"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "b-field",
-              {
-                attrs: {
-                  label: "Description",
-                  type: _vm.errors.address ? "is-danger" : "",
-                  message: _vm.errors.address ? _vm.errors.address[0] : ""
-                }
-              },
-              [
-                _c("b-input", {
-                  attrs: {
-                    name: "description",
-                    "icon-pack": "fas",
-                    icon: "location-arrow"
-                  },
-                  model: {
-                    value: _vm.item.description,
-                    callback: function($$v) {
-                      _vm.$set(_vm.item, "description", $$v)
-                    },
-                    expression: "item.description"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "b-field",
-              {
-                attrs: {
-                  label: "Price",
-                  type: _vm.errors.description ? "is-danger" : "",
-                  message: _vm.errors.description
-                    ? _vm.errors.description[0]
-                    : ""
-                }
-              },
-              [
-                _c("b-input", {
-                  attrs: {
-                    type: "number",
-                    step: "any",
-                    name: "price",
-                    "icon-pack": "fas",
-                    icon: "info-circle"
-                  },
-                  model: {
-                    value: _vm.item.price,
-                    callback: function($$v) {
-                      _vm.$set(_vm.item, "price", $$v)
-                    },
-                    expression: "item.price"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "b-field",
-              {
-                staticClass: "file",
-                attrs: {
-                  type: _vm.errors.image ? "is-danger" : "",
-                  message: _vm.errors.image ? _vm.errors.image[0] : ""
-                }
-              },
-              [
-                _c(
-                  "b-upload",
-                  {
-                    attrs: { name: "image" },
-                    model: {
-                      value: _vm.file,
-                      callback: function($$v) {
-                        _vm.file = $$v
-                      },
-                      expression: "file"
-                    }
-                  },
-                  [
-                    _c(
-                      "a",
-                      { staticClass: "button is-info" },
-                      [
-                        _c("b-icon", { attrs: { icon: "upload" } }),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("Store image upload")])
-                      ],
-                      1
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _vm.file
-                  ? _c("span", { staticClass: "file-name" }, [
-                      _vm._v(
-                        "\n               " +
-                          _vm._s(_vm.file.name) +
-                          "\n             "
-                      )
-                    ])
-                  : _vm._e()
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("b-field", { attrs: { grouped: "", position: "is-centered" } }, [
-              _c("p", { staticClass: "control" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "button is-primary",
-                    attrs: { type: "submit", name: "button" }
-                  },
-                  [_vm._v(" Save ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "control" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "button is-light",
-                    attrs: { href: _vm.previousUrl }
-                  },
-                  [_vm._v(" Cancel ")]
-                )
-              ])
-            ])
-          ],
-          1
-        )
-      ])
+        ],
+        1
+      )
     ])
   ])
 }
@@ -46647,172 +46637,168 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", [
-    _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "card-content" }, [
-        _c("h1", { staticClass: "title" }, [_vm._v(" Create a new store ")]),
-        _vm._v(" "),
-        _c(
-          "form",
-          {
-            attrs: {
-              action: _vm.createRoute,
-              method: "post",
-              role: "form",
-              enctype: "multipart/form-data"
-            }
-          },
-          [
-            _c("input", {
-              attrs: { type: "hidden", name: "_token" },
-              domProps: { value: _vm.csrfToken }
-            }),
-            _vm._v(" "),
-            _c(
-              "b-field",
-              {
+  return _c("div", { staticClass: "card" }, [
+    _c("div", { staticClass: "card-content" }, [
+      _c("h1", { staticClass: "title" }, [_vm._v(" Create a new store ")]),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          attrs: {
+            action: _vm.createRoute,
+            method: "post",
+            role: "form",
+            enctype: "multipart/form-data"
+          }
+        },
+        [
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrfToken }
+          }),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              attrs: {
+                label: "Name",
+                type: _vm.errors.name ? "is-danger" : "",
+                message: _vm.errors.name ? _vm.errors.name[0] : ""
+              }
+            },
+            [
+              _c("b-input", {
                 attrs: {
-                  label: "Name",
-                  type: _vm.errors.name ? "is-danger" : "",
-                  message: _vm.errors.name ? _vm.errors.name[0] : ""
+                  placeholder: "Store name",
+                  name: "name",
+                  "icon-pack": "fas",
+                  icon: "store"
                 }
-              },
-              [
-                _c("b-input", {
-                  attrs: {
-                    placeholder: "Store name",
-                    name: "name",
-                    "icon-pack": "fas",
-                    icon: "store"
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              attrs: {
+                label: "Address",
+                type: _vm.errors.address ? "is-danger" : "",
+                message: _vm.errors.address ? _vm.errors.address[0] : ""
+              }
+            },
+            [
+              _c("b-input", {
+                attrs: {
+                  placeholder: "Store address",
+                  name: "address",
+                  "icon-pack": "fas",
+                  icon: "location-arrow"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              attrs: {
+                label: "Description",
+                type: _vm.errors.description ? "is-danger" : "",
+                message: _vm.errors.description ? _vm.errors.description[0] : ""
+              }
+            },
+            [
+              _c("b-input", {
+                attrs: {
+                  type: "textarea",
+                  placeholder: "Store description",
+                  name: "description",
+                  "icon-pack": "fas",
+                  icon: "info-circle"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-field",
+            {
+              staticClass: "file",
+              attrs: {
+                type: _vm.errors.image ? "is-danger" : "",
+                message: _vm.errors.image ? _vm.errors.image[0] : ""
+              }
+            },
+            [
+              _c(
+                "b-upload",
+                {
+                  attrs: { name: "image" },
+                  model: {
+                    value: _vm.file,
+                    callback: function($$v) {
+                      _vm.file = $$v
+                    },
+                    expression: "file"
                   }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "b-field",
-              {
-                attrs: {
-                  label: "Address",
-                  type: _vm.errors.address ? "is-danger" : "",
-                  message: _vm.errors.address ? _vm.errors.address[0] : ""
-                }
-              },
-              [
-                _c("b-input", {
-                  attrs: {
-                    placeholder: "Store address",
-                    name: "address",
-                    "icon-pack": "fas",
-                    icon: "location-arrow"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "b-field",
-              {
-                attrs: {
-                  label: "Description",
-                  type: _vm.errors.description ? "is-danger" : "",
-                  message: _vm.errors.description
-                    ? _vm.errors.description[0]
-                    : ""
-                }
-              },
-              [
-                _c("b-input", {
-                  attrs: {
-                    type: "textarea",
-                    placeholder: "Store description",
-                    name: "description",
-                    "icon-pack": "fas",
-                    icon: "info-circle"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "b-field",
-              {
-                staticClass: "file",
-                attrs: {
-                  type: _vm.errors.image ? "is-danger" : "",
-                  message: _vm.errors.image ? _vm.errors.image[0] : ""
-                }
-              },
-              [
-                _c(
-                  "b-upload",
-                  {
-                    attrs: { name: "image" },
-                    model: {
-                      value: _vm.file,
-                      callback: function($$v) {
-                        _vm.file = $$v
-                      },
-                      expression: "file"
-                    }
-                  },
-                  [
-                    _c(
-                      "a",
-                      { staticClass: "button is-info" },
-                      [
-                        _c("b-icon", { attrs: { icon: "upload" } }),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("Store image upload")])
-                      ],
-                      1
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _vm.file
-                  ? _c("span", { staticClass: "file-name" }, [
-                      _vm._v(
-                        "\n                 " +
-                          _vm._s(_vm.file.name) +
-                          "\n               "
-                      )
-                    ])
-                  : _vm._e()
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("b-field", { attrs: { grouped: "", position: "is-centered" } }, [
-              _c("p", { staticClass: "control" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "button is-primary",
-                    attrs: { type: "submit", name: "button" }
-                  },
-                  [_vm._v(" Create ")]
-                )
-              ]),
+                },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "button is-info" },
+                    [
+                      _c("b-icon", { attrs: { icon: "upload" } }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Store image upload")])
+                    ],
+                    1
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _c("p", { staticClass: "control" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "button is-light",
-                    attrs: { href: _vm.previousUrl }
-                  },
-                  [_vm._v(" Cancel ")]
-                )
-              ])
+              _vm.file
+                ? _c("span", { staticClass: "file-name" }, [
+                    _vm._v(
+                      "\n                 " +
+                        _vm._s(_vm.file.name) +
+                        "\n               "
+                    )
+                  ])
+                : _vm._e()
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("b-field", { attrs: { grouped: "", position: "is-centered" } }, [
+            _c("p", { staticClass: "control" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "button is-primary",
+                  attrs: { type: "submit", name: "button" }
+                },
+                [_vm._v(" Create ")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "control" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "button is-light",
+                  attrs: { href: _vm.previousUrl }
+                },
+                [_vm._v(" Cancel ")]
+              )
             ])
-          ],
-          1
-        )
-      ])
+          ])
+        ],
+        1
+      )
     ])
   ])
 }

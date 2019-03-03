@@ -21,6 +21,8 @@ Route::resource('users', 'UserController')->only([
     'show', 'edit', 'update'
 ]);
 
+Route::get('/orders/create', 'OrderController@create')->name('orders.create');
+
 Route::resources([
   'users.stores' => 'StoreController',
   'stores.items' => 'ItemController'

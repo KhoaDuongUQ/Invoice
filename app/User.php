@@ -27,6 +27,22 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
+     * Get the customers of a user
+     */
+    public function customers()
+    {
+        return $this->hasMany('App\Customer');
+    }
+
+    /**
+     * Get the orders of a user
+     */
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
+    /**
      * Get the user's image.
      */
     public function image()

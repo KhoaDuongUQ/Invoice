@@ -23,6 +23,14 @@ class Item extends Model
     }
 
     /**
+     * Get the orderItems of a items
+     */
+    public function items()
+    {
+        return $this->hasMany('App\OrderItem');
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array

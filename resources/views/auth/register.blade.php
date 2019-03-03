@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="container">
   <div class="columns">
     <div class="column is-one-third is-offset-one-third">
       <user-create-form
@@ -12,5 +13,6 @@
       </user-create-form>
     </div>
   </div>
+</div>
 
 @endsection
