@@ -19,11 +19,11 @@
 </head>
 <body>
     <div id="app">
-      @include('_includes.header')
+      @include('_partials.header')
 
       @yield('content')
 
-      @include('_includes.footer')
+      @include('_partials.footer')
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" ></script>

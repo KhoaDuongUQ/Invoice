@@ -3,7 +3,7 @@
 @section('content')
   <div class="columns">
     <div class="column is-one-third is-offset-one-third">
-      <div class="card">
+      <div class="card m-t-100">
         <div class="card-content">
 
           <h1 class="title"> Log In </h1>
@@ -39,7 +39,7 @@
             <div class="field">
               <div class="control">
                 <label class="checkbox">
-                  <input class="m-t-10" type="checkbox" name="remember">
+                  <input class="m-t-10" type="checkbox" name="remember_me">
                   Remember Me
                 </label>
               </div>

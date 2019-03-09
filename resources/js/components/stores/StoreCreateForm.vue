@@ -1,5 +1,5 @@
 <template>
-<div class="card">
+<div class="card m-t-100">
     <div class="card-content">
         <h1 class="title"> Create a new store </h1>
 

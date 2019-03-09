@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Store;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        if (Auth::check()) {
+            $stores_count = Store::count();
+            $stores = auth()->user()->stores()->orderBy('created_at', 'desc')->take(10)->get();
+            return view('home.auth', [
+            'stores' => $stores,
+            'stores_count' => $stores_count,
+          ]);
+        } else {
+            return view('home.guest');
+        }
     }
 }

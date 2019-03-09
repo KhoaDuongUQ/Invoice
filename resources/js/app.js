@@ -40,6 +40,7 @@ Vue.component('logout-button', require('./components/partials/LogoutButton.vue')
 Vue.component('flash-message', require('./components/partials/FlashMessage.vue').default);
 Vue.component('edit-button', require('./components/partials/EditButton.vue').default);
 Vue.component('delete-button', require('./components/partials/DeleteButton.vue').default);
+Vue.component('dashboard-sidebar', require('./components/partials/DashboardSidebar.vue').default);
 
 
 const app = new Vue({

@@ -4,7 +4,7 @@
 
         <div class="navbar-brand">
             <a class="navbar-item" :href="homeRoute">
-              <img :src="logoUrl" width="112" height="28">
+              <span class="logo">Invoice</span>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
               <span aria-hidden="true"></span>
@@ -90,4 +90,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>

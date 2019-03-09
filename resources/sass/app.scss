@@ -1,6 +1,9 @@
 // Variables
 @import 'variables';
 
+// Global styles
+@import 'global';
+
 // Font Awesome
 @import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
@@ -20,5 +23,4 @@
 @import 'node_modules/buefy/src/scss/buefy';
 
 // Custom SCSS
-@import 'styles';
 @import 'spacing';
