@@ -9,40 +9,58 @@ window.Vue = require('vue');
 import Vue from 'vue'
 import Buefy from 'buefy'
 Vue.use(Buefy)
+
+Vue.mixin({
+    methods: {
+        route: route
+    }
+});
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
-// Auth
-Vue.component('change-password-button', require('./components/auth/ChangePasswordButton.vue').default);
-Vue.component('change-password-form', require('./components/auth/ChangePasswordForm.vue').default);
-
-// User
-Vue.component('user-create-form', require('./components/users/UserCreateForm.vue').default);
-Vue.component('user-edit-form', require('./components/users/UserEditForm.vue').default);
-
-// Store
-Vue.component('store-create-form', require('./components/stores/StoreCreateForm.vue').default);
-Vue.component('store-edit-form', require('./components/stores/StoreEditForm.vue').default);
-
-//Item
-Vue.component('item-create-form', require('./components/items/ItemCreateForm.vue').default);
-Vue.component('item-edit-form', require('./components/items/ItemEditForm.vue').default);
-
 // Partials
 Vue.component('navbar-guest', require('./components/partials/NavbarGuest.vue').default);
 Vue.component('navbar-auth', require('./components/partials/NavbarAuth.vue').default);
 Vue.component('logout-button', require('./components/partials/LogoutButton.vue').default);
 Vue.component('flash-message', require('./components/partials/FlashMessage.vue').default);
-Vue.component('edit-button', require('./components/partials/EditButton.vue').default);
 Vue.component('delete-button', require('./components/partials/DeleteButton.vue').default);
-Vue.component('dashboard-sidebar', require('./components/partials/DashboardSidebar.vue').default);
 
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {
+        'home-auth': () =>
+            import ('@/js/pages/home/Auth.vue'),
+        'home-guest': () =>
+            import ('@/js/pages/home/Guest.vue'),
+        'auth-login': () =>
+            import ('@/js/pages/auth/Login.vue'),
+        'auth-register': () =>
+            import ('@/js/pages/auth/Register.vue'),
+        'auth-password-update': () =>
+            import ('@/js/pages/auth/PasswordUpdate.vue'),
+        'stores-index': () =>
+            import ('@/js/pages/stores/Index.vue'),
+        'stores-create': () =>
+            import ('@/js/pages/stores/Create.vue'),
+        'stores-edit': () =>
+            import ('@/js/pages/stores/Edit.vue'),
+        'stores-show': () =>
+            import ('@/js/pages/stores/Show.vue'),
+        'items-index': () =>
+            import ('@/js/pages/items/Index.vue'),
+        'items-create': () =>
+            import ('@/js/pages/items/Create.vue'),
+        'items-edit': () =>
+            import ('@/js/pages/items/Edit.vue'),
+        'items-show': () =>
+            import ('@/js/pages/items/Show.vue'),
+        'users-show': () =>
+            import ('@/js/pages/users/Show.vue'),
+        'users-edit': () =>
+            import ('@/js/pages/users/Edit.vue'),
+    }
 });

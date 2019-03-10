@@ -29,10 +29,9 @@ class StoreController extends Controller
      */
     public function index(User $user)
     {
-        $stores= $user->stores()->orderBy('created_at', 'desc')->paginate(5);
-        return view('stores.index', [
-          'user' => $user,
-          'stores' => $stores]);
+        $stores= $user->stores()->orderBy('created_at', 'desc')->get()->load('image');
+
+        return view('stores.index', ['stores' => $stores]);
     }
 
     /**
@@ -89,9 +88,8 @@ class StoreController extends Controller
     public function show(User $user, Store $store)
     {
         return view('stores.show', [
-            'user' => $user,
-            'store' => $store,
-            'items' => $store->items()->orderBy('created_at', 'desc')->take(5)->get(),
+            'store' => $store->load('image'),
+            'items' => $store->items()->orderBy('created_at', 'desc')->take(5)->get()->load('image'),
           ]);
     }
 
@@ -104,8 +102,7 @@ class StoreController extends Controller
     public function edit(User $user, Store $store)
     {
         return view('stores.edit', [
-          'user' => $user,
-          'store' => $store,
+          'store' => $store->load('image'),
         ]);
     }
 

@@ -18,7 +18,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         return view('users.show', [
-            'user' => $user,
+            'user' => $user->load('image'),
           ]);
     }
 
@@ -31,7 +31,7 @@ class UserController extends Controller
     public function edit(User $user)
     {
         return view('users.edit', [
-          'user' => $user,
+          'user' => $user->load('image'),
         ]);
     }
 

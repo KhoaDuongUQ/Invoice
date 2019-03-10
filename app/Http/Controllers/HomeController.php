@@ -26,12 +26,10 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            $stores_count = Store::count();
-            $stores = auth()->user()->stores()->orderBy('created_at', 'desc')->take(10)->get();
+            $stores = auth()->user()->stores()->get();
             return view('home.auth', [
-            'stores' => $stores,
-            'stores_count' => $stores_count,
-          ]);
+              'stores' => $stores
+            ]);
         } else {
             return view('home.guest');
         }

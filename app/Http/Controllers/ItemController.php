@@ -28,10 +28,10 @@ class ItemController extends Controller
      */
     public function index(Store $store)
     {
-        $items = $store->items()->orderBy('created_at', 'desc')->paginate(5);
+        $items = $store->items()->orderBy('created_at', 'desc')->get();
         return view('items.index', [
           'store' => $store,
-          'items' => $items
+          'items' => $items->load('image')
         ]);
     }
 
@@ -90,7 +90,7 @@ class ItemController extends Controller
     {
         return view('items.show', [
           'store' => $store,
-          'item' => $item,
+          'item' => $item->load('image'),
         ]);
     }
 
@@ -104,7 +104,7 @@ class ItemController extends Controller
     {
         return view('items.edit', [
         'store' => $store,
-        'item' => $item
+        'item' => $item->load('image')
       ]);
     }
 
